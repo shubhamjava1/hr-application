@@ -1,0 +1,23 @@
+<h2>Structural Directive</h2>
+<p>Structural directives change the DOM layout by adding and removing elements. These Directive indicate by *</p>
+<p>Pre Defined Structural directive:
+  <a (click)="structuralType='for'">*ngFor</a>,
+  <a (click)="structuralType='if'">*ngIf</a>
+</p>
+
+<div *ngIf="structuralType=='for'">
+  <h3>*ngFor</h3>
+  <p>NgFor is a directive that iterates over collection of data. It is used to customize data display. ... NgFor provides local variables that will help to get index of current iteration, detect if element in iteration is first or last and odd or even. NgFor is used with HTML element as well as component element.</p>
+  <p>Example:</p>
+  <ul>
+    <li *ngFor="let poorna of ngForExample">{{poorna}}</li>
+  </ul>
+</div>
+
+
+<div *ngIf="structuralType=='if'">
+  <h3>*ngIf</h3>
+  <p>The NgIf directive is used when you want to display or remove an element based on a condition. We define the condition by passing an expression to the directive which is evaluated in the context of it's host component. The syntax is: *ngIf="condition"</p>
+  <p>Example:</p>
+  <p>Refer the Directive Type component for *ngIf Example</p>
+</div>

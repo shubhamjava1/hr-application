@@ -1,0 +1,29 @@
+<h2>Attribute Directive</h2>
+<p>These directives change the appearance or behavior of a specified element or component. these Directive indicate by []</p>
+<p>Pre defined Attribute Directive:
+  <a (click)="attributeType='class'">ngClass</a>,
+  <a (click)="attributeType='style'">ngStyle</a>
+</p>
+<div *ngIf="attributeType == 'style'">
+  <h3>ngStyle</h3>
+  <p>An attribute directive that updates styles for the containing HTML element. Sets one or more style properties, specified
+    as colon-separated key-value pairs. The key is a style name, with an optional .</p>
+  <p>Example</p>
+  <ul>
+    <li style="color:orange">Orange</li>
+    <li style="color:red">red</li>
+    <li style="color:green">green</li>
+    <li style="color:blue">blue</li>
+  </ul>
+
+  <h3>using Directive</h3>
+  <ul>
+    <li *ngFor="let data of ngForExample" [ngStyle]="{color:data}">{{data}}</li>
+  </ul>
+</div>
+<div *ngIf="attributeType == 'class'">
+  <h3>NgClass</h3><button (click)="_hideShowContent()">{{_displayContent}}</button>
+  <p [ngClass]="{hide:_hide}">The ngClass directive allows you to dynamically set CSS classes on an HTML element by databinding an expression that represents
+    all classes to be added. ... This means that you can mix strings and objects together in an array to give you more control
+    over what CSS classes appear. See the code below for an example of this.</p>
+</div>

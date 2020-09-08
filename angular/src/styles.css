@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+a {
+    color: blue;
+    cursor: pointer;
+}
+
+body {
+    font-size: 15px;
+    font-family:sans-serif;
+    background-color: #80808052;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #1a6384;
+    padding: 10ox 0 10px 0;
+    
+}
+p{
+    
+    font-size: 19px;
+    color: #000000a3;
+    padding: 10px 0 10px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}

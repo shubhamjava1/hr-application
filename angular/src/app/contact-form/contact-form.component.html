@@ -1,0 +1,32 @@
+{{departmentObj | json}}
+<form style="margin-top: 20px;">
+  <label>Name:</label>
+  <input type="text" name="name" [(ngModel)]="departmentObj.name">
+  <label>Code</label>
+  <input type="text" name="code" [(ngModel)]="departmentObj.code">
+  <label>Status</label>
+  <select name="status" [(ngModel)]="departmentObj.status">
+    <option>ACTIVE</option>
+    <option>INACTIVE</option>
+  </select>
+  <button (click)="_submit()">Submit</button>
+</form>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of departmentList">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.code}}</td>
+      <td>{{data.status}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,66 @@
+<div class="home" *ngIf="displayPage == 'home'">
+    <h1>Create Job Title</h1>
+    <form>
+        <label>Job Title</label>
+        <input type="text" [(ngModel)]="resource.jobTitle" name="title"/>
+        <label>Description</label>
+        <input type="text" [(ngModel)]="resource.description" name="description"/>
+        <label>Wage In Dollers</label>
+        <input type="text" [(ngModel)]="resource.wageRange" name="wage"/>
+        <label>Wage Range</label>
+        <select [(ngModel)]="resource.wageRange" name="type">
+            <option>$/HR</option>
+            <option>$/Per Annum)</option>
+        </select>
+       <!-- <label>Joining Date</label>
+        <input type="date" [(ngModel)]="resource.date" name="date">
+        <label>Mobile</label>
+        <input type="text" [(ngModel)]="resource.mobile" name="mobile">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="resource.email" name="email" />  -->
+        <br>
+        <button type="button" (click)="getValue()">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <!-- <table>
+        <thead>
+            <tr>
+                <td>S.No</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of arr">
+                <td>{{data}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <!-- <pre>{{arrResource | json}}</pre> -->
+    <table border="1" style="width:100%;margin-top:50px;">
+        <thead>
+            <tr>
+                <td>Job Id</td>
+                <td>Job Title</td>
+                <td>Description</td>
+                <td>Wage Range</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody *ngIf="arrResource.length > 0">
+            <tr *ngFor="let data of arrResource">
+                <td>{{data.id}}</td>
+                <td>{{data.jobTitle}}</td>
+                <td>{{data.description}}</td>
+                <td>{{data.wageRange}}</td>
+               
+                <td><a (click)="sendData(data)">Edit</a> / <a (click)="deleteItem(data)">Delete</a></td>
+               
+            </tr>
+        </tbody>
+        <tbody *ngIf="arrResource.length == 0">
+           <tr>
+            <td colspan="7">No data found</td>
+           </tr> 
+        </tbody>
+    
+    </table>
+    </div>

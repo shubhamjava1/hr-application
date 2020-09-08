@@ -1,0 +1,21 @@
+<h1>Directive</h1>
+<p>Angular contains three type of directive:</p>
+<ul>
+  <li>
+    <a (click)="directiveType='structural'">Structural Directive</a>
+  </li>
+  <li>
+    <a (click)="directiveType='attribute'">Attribute Directive</a>
+  </li>
+  <li>
+    <a (click)="directiveType='component'">Component Directive</a>
+  </li>
+</ul>
+
+<div *ngIf="directiveType == 'structural'">
+  <app-structural-directive></app-structural-directive>
+</div>
+
+<div *ngIf="directiveType == 'attribute'">
+  <sunny></sunny>
+</div>
